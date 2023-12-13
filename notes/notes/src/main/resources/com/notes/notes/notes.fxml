@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0"
+            prefWidth="989.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.notes.notes.controllers.NotesController">
+   <TableView fx:id="tb_notes" prefHeight="662.0" prefWidth="462.0">
+      <columns>
+         <TableColumn fx:id="col_id" prefWidth="75.0" text="ID"/>
+         <TableColumn fx:id="col_notes" prefWidth="157.0" text="Notes"/>
+         <TableColumn fx:id="col_date" prefWidth="101.0" text="Tanggal"/>
+         <TableColumn fx:id="col_status" prefWidth="128.0" text="Status"/>
+      </columns>
+   </TableView>
+   <VBox layoutX="496.0" layoutY="183.0" prefHeight="95.0" prefWidth="416.0">
+      <Label text="Note"/>
+      <TextArea fx:id="tf_note" prefHeight="69.0" prefWidth="329.0"/>
+   </VBox>
+   <VBox layoutX="496.0" layoutY="308.0" prefHeight="58.0" prefWidth="416.0">
+      <Label text="Tanggal Kegiatan"/>
+      <DatePicker fx:id="tf_date" prefHeight="31.0" prefWidth="423.0"/>
+   </VBox>
+   <VBox layoutX="496.0" layoutY="400.0" prefHeight="58.0" prefWidth="416.0">
+      <Label text="Status"/>
+      <ComboBox fx:id="cb_status" prefHeight="31.0" prefWidth="417.0"/>
+   </VBox>
+   <HBox layoutX="578.0" layoutY="471.0" prefHeight="31.0" prefWidth="334.0" spacing="30.0">
+      <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteAction" text="Delete"/>
+      <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editAction" text="Edit"/>
+      <Button fx:id="btnSave" mnemonicParsing="false" onAction="#simpanAction" text="Save"/>
+      <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearAction" text="Clear"/>
+   </HBox>
+   <Label fx:id="lbl_id" layoutX="495.0" layoutY="183.0" visible="false"/>
+   <Label layoutX="498.0" layoutY="48.0" text="Management Journal">
+      <font>
+         <Font size="44.0"/>
+      </font>
+   </Label>
+</AnchorPane>
